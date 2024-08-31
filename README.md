@@ -1,1 +1,1 @@
-# COMPSCI-61C
+# lab-starter
