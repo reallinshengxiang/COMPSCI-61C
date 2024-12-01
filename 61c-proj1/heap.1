@@ -1,0 +1,2131 @@
+--------------------------------------------------------------------------------
+Command:            ./unit-tests
+Massif arguments:   (none)
+ms_print arguments: massif.out.1839272
+--------------------------------------------------------------------------------
+
+
+    MB
+2.326^                                                                :       
+     |                                                      #########::::@:::@
+     |                                                      #        ::::@:::@
+     |                                                      #        ::::@:::@
+     |                                                      #        ::::@:::@
+     |                                                      #        ::::@:::@
+     |                                                      #        ::::@:::@
+     |                                            @@@@@@@@@:#        ::::@:::@
+     |                                            @        :#        ::::@:::@
+     |                                            @        :#        ::::@:::@
+     |                                            @        :#        ::::@:::@
+     |                                            @        :#        ::::@:::@
+     |                                            @        :#        ::::@:::@
+     |                                            @        :#        ::::@:::@
+     |                                  @@@@@@@@@:@        :#        ::::@:::@
+     |                                  @        :@        :#        ::::@:::@
+     |                                  @        :@        :#        ::::@:::@
+     |                                  @        :@        :#        ::::@:::@
+     |                                  @        :@        :#        ::::@:::@
+     |                                  @        :@        :#        ::::@:::@
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   2.544
+
+Number of snapshots: 87
+ Detailed snapshots: [3, 7, 10, 11, 13, 31, 32, 35, 36, 43, 44, 49, 53, 55, 60, 62, 63, 66 (peak), 76, 86]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        184,609            1,032            1,024             8            0
+  2        203,761            1,984            1,598           386            0
+  3        230,443            1,984            1,598           386            0
+80.54% (1,598B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->51.61% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->51.61% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->51.61% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->51.61% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->51.61% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->51.61% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->51.61% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->19.05% (378B) 0x109874: create_default_state (state.c:39)
+| ->19.05% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+|   ->19.05% (378B) 0x10E39D: test_and_print (asserts.c:247)
+|     ->19.05% (378B) 0x10D8DD: main (unit_tests.c:1669)
+|       
+->07.26% (144B) 0x10980C: create_default_state (state.c:33)
+| ->07.26% (144B) 0x10A961: test_create_default_state (unit_tests.c:18)
+|   ->07.26% (144B) 0x10E39D: test_and_print (asserts.c:247)
+|     ->07.26% (144B) 0x10D8DD: main (unit_tests.c:1669)
+|       
+->01.61% (32B) 0x1097D1: create_default_state (state.c:28)
+| ->01.61% (32B) 0x10A961: test_create_default_state (unit_tests.c:18)
+|   ->01.61% (32B) 0x10E39D: test_and_print (asserts.c:247)
+|     ->01.61% (32B) 0x10D8DD: main (unit_tests.c:1669)
+|       
+->01.01% (20B) 0x10982C: create_default_state (state.c:35)
+  ->01.01% (20B) 0x10A961: test_create_default_state (unit_tests.c:18)
+    ->01.01% (20B) 0x10E39D: test_and_print (asserts.c:247)
+      ->01.01% (20B) 0x10D8DD: main (unit_tests.c:1669)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4        246,515           11,544           10,784           760            0
+  5        272,266           11,856           11,012           844            0
+  6        284,285            3,640            2,660           980            0
+  7        302,640           12,728           11,534         1,194            0
+90.62% (11,534B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->64.36% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->64.36% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->64.36% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->64.36% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->64.36% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->64.36% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->64.36% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->64.36% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->64.36% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->64.36% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->64.36% (8,192B) 0x10B27A: test_next_square_board_1 (unit_tests.c:242)
+|   |               | ->64.36% (8,192B) 0x10B73D: test_next_square (unit_tests.c:480)
+|   |               |   ->64.36% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->64.36% (8,192B) 0x10D931: main (unit_tests.c:1675)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->09.57% (1,218B) 0x109874: create_default_state (state.c:39)
+| ->02.97% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->02.97% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->02.97% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->02.97% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->02.97% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->02.97% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.97% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->02.97% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->02.97% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->02.97% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.97% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->00.66% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->08.05% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->08.05% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->08.05% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->08.05% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->08.05% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->08.05% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->08.05% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->04.53% (576B) 0x10980C: create_default_state (state.c:33)
+| ->01.13% (144B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.13% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.13% (144B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.13% (144B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.13% (144B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.13% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.13% (144B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.13% (144B) 0x10AFE0: test_print_board_2 (unit_tests.c:169)
+| | ->01.13% (144B) 0x10B21C: test_print_board (unit_tests.c:207)
+| |   ->01.13% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.13% (144B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.13% (144B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+|   ->01.13% (144B) 0x10B73D: test_next_square (unit_tests.c:480)
+|     ->01.13% (144B) 0x10E39D: test_and_print (asserts.c:247)
+|       ->01.13% (144B) 0x10D931: main (unit_tests.c:1675)
+|         
+->03.71% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->03.71% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->03.71% (472B) 0x109B30: save_board (state.c:98)
+|   | ->03.71% (472B) 0x10B27A: test_next_square_board_1 (unit_tests.c:242)
+|   | | ->03.71% (472B) 0x10B73D: test_next_square (unit_tests.c:480)
+|   | |   ->03.71% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->03.71% (472B) 0x10D931: main (unit_tests.c:1675)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.41% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8        313,943            4,992            3,444         1,548            0
+  9        335,037            4,952            3,424         1,528            0
+ 10        358,267           14,472           12,578         1,894            0
+86.91% (12,578B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->56.61% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->56.61% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->56.61% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->56.61% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->56.61% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->56.61% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->56.61% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->56.61% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->56.61% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->56.61% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->56.61% (8,192B) 0x10B364: test_next_square_board_2 (unit_tests.c:291)
+|   |               | ->56.61% (8,192B) 0x10B767: test_next_square (unit_tests.c:485)
+|   |               |   ->56.61% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->56.61% (8,192B) 0x10D931: main (unit_tests.c:1675)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->13.64% (1,974B) 0x109874: create_default_state (state.c:39)
+| ->02.61% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->02.61% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->02.61% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->02.61% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->02.61% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->02.61% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.61% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->02.61% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->02.61% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->02.61% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.61% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->02.61% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->02.61% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->02.61% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.61% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->02.61% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->02.61% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->02.61% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.61% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->00.58% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->07.08% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->07.08% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->07.08% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->07.08% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->07.08% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->07.08% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->07.08% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->05.97% (864B) 0x10980C: create_default_state (state.c:33)
+| ->05.97% (864B) in 6+ places, all below ms_print's threshold (01.00%)
+| 
+->03.26% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->03.26% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->03.26% (472B) 0x109B30: save_board (state.c:98)
+|   | ->03.26% (472B) 0x10B364: test_next_square_board_2 (unit_tests.c:291)
+|   | | ->03.26% (472B) 0x10B767: test_next_square (unit_tests.c:485)
+|   | |   ->03.26% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->03.26% (472B) 0x10D931: main (unit_tests.c:1675)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.36% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 11        381,747           15,344           13,100         2,244            0
+85.38% (13,100B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->53.39% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->53.39% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->53.39% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->53.39% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->53.39% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->53.39% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->53.39% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->53.39% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->53.39% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->53.39% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->53.39% (8,192B) 0x10B404: test_next_square_board_3 (unit_tests.c:332)
+|   |               | ->53.39% (8,192B) 0x10B791: test_next_square (unit_tests.c:490)
+|   |               |   ->53.39% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->53.39% (8,192B) 0x10D931: main (unit_tests.c:1675)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->15.33% (2,352B) 0x109874: create_default_state (state.c:39)
+| ->02.46% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->02.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->02.46% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->02.46% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->02.46% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->02.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.46% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->02.46% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->02.46% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->02.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->02.46% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->02.46% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->02.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->02.46% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->02.46% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->02.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->02.46% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->02.46% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->02.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->02.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->00.55% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->06.67% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->06.67% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->06.67% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->06.67% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->06.67% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->06.67% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->06.67% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->06.57% (1,008B) 0x10980C: create_default_state (state.c:33)
+| ->06.57% (1,008B) in 7 places, all below massif's threshold (1.00%)
+|   
+->03.08% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->03.08% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->03.08% (472B) 0x109B30: save_board (state.c:98)
+|   | ->03.08% (472B) 0x10B404: test_next_square_board_3 (unit_tests.c:332)
+|   | | ->03.08% (472B) 0x10B791: test_next_square (unit_tests.c:490)
+|   | |   ->03.08% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->03.08% (472B) 0x10D931: main (unit_tests.c:1675)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.34% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 12        394,949           16,216           13,622         2,594            0
+ 13        417,589            8,888            5,952         2,936            0
+66.97% (5,952B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->34.97% (3,108B) 0x109874: create_default_state (state.c:39)
+| ->04.25% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->04.25% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->04.25% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->04.25% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->04.25% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->04.25% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->04.25% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->04.25% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->04.25% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->04.25% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->04.25% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->04.25% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->04.25% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->04.25% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->04.25% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->04.25% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->04.25% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->04.25% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->04.25% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->04.25% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->04.25% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->04.25% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->04.25% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->04.25% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->00.95% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->14.58% (1,296B) 0x10980C: create_default_state (state.c:33)
+| ->01.62% (144B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.62% (144B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.62% (144B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.62% (144B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.62% (144B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.62% (144B) 0x10AFE0: test_print_board_2 (unit_tests.c:169)
+| | ->01.62% (144B) 0x10B21C: test_print_board (unit_tests.c:207)
+| |   ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.62% (144B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.62% (144B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.62% (144B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.62% (144B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.62% (144B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.62% (144B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.62% (144B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.62% (144B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.62% (144B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.62% (144B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.62% (144B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.62% (144B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.62% (144B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.62% (144B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.62% (144B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.62% (144B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.62% (144B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+|   ->01.62% (144B) 0x10B7DF: test_next_square (unit_tests.c:500)
+|     ->01.62% (144B) 0x10E39D: test_and_print (asserts.c:247)
+|       ->01.62% (144B) 0x10D931: main (unit_tests.c:1675)
+|         
+->11.52% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->11.52% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->11.52% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->11.52% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->11.52% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->11.52% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->11.52% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->05.31% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->05.31% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->05.31% (472B) 0x109B30: save_board (state.c:98)
+|   | ->05.31% (472B) 0x10B5D1: test_next_square_board_5 (unit_tests.c:421)
+|   | | ->05.31% (472B) 0x10B7DF: test_next_square (unit_tests.c:500)
+|   | |   ->05.31% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->05.31% (472B) 0x10D931: main (unit_tests.c:1675)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.59% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 14        441,156            9,760            6,474         3,286            0
+ 15        467,800           10,632            6,996         3,636            0
+ 16        490,894           11,584            7,570         4,014            0
+ 17        513,684           11,584            7,570         4,014            0
+ 18        534,219           11,056            7,078         3,978            0
+ 19        546,232           12,376            8,040         4,336            0
+ 20        569,359           13,328            8,614         4,714            0
+ 21        592,143           13,328            8,614         4,714            0
+ 22        612,678           12,800            8,122         4,678            0
+ 23        624,718           14,120            9,084         5,036            0
+ 24        647,872           15,072            9,658         5,414            0
+ 25        670,660           15,072            9,658         5,414            0
+ 26        691,195           14,544            9,166         5,378            0
+ 27        704,886           15,336            9,635         5,701            0
+ 28        726,822           16,208           10,167         6,041            0
+ 29        752,388           16,816           10,702         6,114            0
+ 30        772,923           16,288           10,210         6,078            0
+ 31        796,232           25,808           19,364         6,444            0
+75.03% (19,364B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->31.74% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->31.74% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->31.74% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->31.74% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->31.74% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->31.74% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->31.74% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->31.74% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->31.74% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->31.74% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->31.74% (8,192B) 0x10BF5D: test_update_tail_board_2 (unit_tests.c:791)
+|   |               | ->31.74% (8,192B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+|   |               |   ->31.74% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->31.74% (8,192B) 0x10D985: main (unit_tests.c:1681)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->26.69% (6,888B) 0x109874: create_default_state (state.c:39)
+| ->01.46% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.46% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.46% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.46% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.46% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.46% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.46% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.46% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.46% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.46% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.46% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.46% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.46% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.46% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.46% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.46% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.46% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.46% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.46% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.46% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.46% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.46% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.46% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.46% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.46% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.46% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.46% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.46% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.46% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.46% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.46% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.46% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.46% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.46% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.46% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.46% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.46% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.46% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->00.33% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->10.60% (2,736B) 0x10980C: create_default_state (state.c:33)
+| ->10.60% (2,736B) in 19 places, all below massif's threshold (1.00%)
+|   
+->03.97% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.97% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->03.97% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->03.97% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->03.97% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->03.97% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->03.97% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.83% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.83% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.83% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.83% (472B) 0x10BF5D: test_update_tail_board_2 (unit_tests.c:791)
+|   | | ->01.83% (472B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+|   | |   ->01.83% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.83% (472B) 0x10D985: main (unit_tests.c:1681)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.20% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32        819,440           26,760           19,938         6,822            0
+74.51% (19,938B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->30.61% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->30.61% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->30.61% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->30.61% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->30.61% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->30.61% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->30.61% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->30.61% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->30.61% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->30.61% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->30.61% (8,192B) 0x10C00B: test_update_tail_board_2 (unit_tests.c:801)
+|   |               | ->30.61% (8,192B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+|   |               |   ->30.61% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->30.61% (8,192B) 0x10D985: main (unit_tests.c:1681)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->27.15% (7,266B) 0x109874: create_default_state (state.c:39)
+| ->01.41% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.41% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.41% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.41% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.41% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.41% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.41% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.41% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.41% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.41% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.41% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.41% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.41% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.41% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.41% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.41% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.41% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.41% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.41% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.41% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.41% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.41% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.41% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.41% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.41% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.41% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.41% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.41% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.41% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.41% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.41% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.41% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.41% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.41% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.41% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.41% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.41% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.41% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.41% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.41% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->00.31% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->10.76% (2,880B) 0x10980C: create_default_state (state.c:33)
+| ->10.76% (2,880B) in 20 places, all below massif's threshold (1.00%)
+|   
+->03.83% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.83% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->03.83% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->03.83% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->03.83% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->03.83% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->03.83% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.76% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.76% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.76% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.76% (472B) 0x10C00B: test_update_tail_board_2 (unit_tests.c:801)
+|   | | ->01.76% (472B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+|   | |   ->01.76% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.76% (472B) 0x10D985: main (unit_tests.c:1681)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.39% (104B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33        831,062           18,560           11,746         6,814            0
+ 34        851,597           18,032           11,254         6,778            0
+ 35        874,761           27,552           20,408         7,144            0
+74.07% (20,408B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->29.73% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->29.73% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->29.73% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->29.73% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->29.73% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->29.73% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->29.73% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->29.73% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->29.73% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->29.73% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->29.73% (8,192B) 0x10C0AC: test_update_tail_board_3 (unit_tests.c:845)
+|   |               | ->29.73% (8,192B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+|   |               |   ->29.73% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->29.73% (8,192B) 0x10D985: main (unit_tests.c:1681)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->27.74% (7,644B) 0x109874: create_default_state (state.c:39)
+| ->01.37% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.37% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.37% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.37% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.37% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.37% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.37% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.37% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.37% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.37% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.37% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.37% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.37% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.37% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.37% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.37% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.37% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.37% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.37% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.37% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.37% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.37% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.37% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.37% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.37% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.37% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.37% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.37% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.37% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.37% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.37% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.37% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.37% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.37% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.37% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.37% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.37% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.37% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.37% (378B) 0x10C092: test_update_tail_board_3 (unit_tests.c:843)
+| | ->01.37% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.37% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.37% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->00.30% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->10.98% (3,024B) 0x10980C: create_default_state (state.c:33)
+| ->10.98% (3,024B) in 21 places, all below massif's threshold (1.00%)
+|   
+->03.72% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.72% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->03.72% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->03.72% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->03.72% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->03.72% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->03.72% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.71% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.71% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.71% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.71% (472B) 0x10C0AC: test_update_tail_board_3 (unit_tests.c:845)
+|   | | ->01.71% (472B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+|   | |   ->01.71% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.71% (472B) 0x10D985: main (unit_tests.c:1681)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.19% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36        898,096           28,504           20,982         7,522            0
+73.61% (20,982B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->28.74% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->28.74% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->28.74% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->28.74% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->28.74% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->28.74% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->28.74% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->28.74% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->28.74% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->28.74% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->28.74% (8,192B) 0x10C203: test_update_tail_board_3 (unit_tests.c:864)
+|   |               | ->28.74% (8,192B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+|   |               |   ->28.74% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->28.74% (8,192B) 0x10D985: main (unit_tests.c:1681)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->28.14% (8,022B) 0x109874: create_default_state (state.c:39)
+| ->01.33% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.33% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.33% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.33% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.33% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.33% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.33% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.33% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.33% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.33% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.33% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.33% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.33% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.33% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.33% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.33% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.33% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.33% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.33% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.33% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.33% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.33% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.33% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.33% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.33% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.33% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.33% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.33% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.33% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.33% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.33% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.33% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.33% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.33% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.33% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.33% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.33% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.33% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.33% (378B) 0x10C092: test_update_tail_board_3 (unit_tests.c:843)
+| | ->01.33% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.33% (378B) 0x10C142: test_update_tail_board_3 (unit_tests.c:855)
+| | ->01.33% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.33% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.33% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->00.29% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->11.11% (3,168B) 0x10980C: create_default_state (state.c:33)
+| ->11.11% (3,168B) in 22 places, all below massif's threshold (1.00%)
+|   
+->03.59% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.59% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->03.59% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->03.59% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->03.59% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->03.59% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->03.59% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.66% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.66% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.66% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.66% (472B) 0x10C203: test_update_tail_board_3 (unit_tests.c:864)
+|   | | ->01.66% (472B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+|   | |   ->01.66% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.66% (472B) 0x10D985: main (unit_tests.c:1681)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.36% (104B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 37        909,739           20,304           12,790         7,514            0
+ 38        930,274           19,776           12,298         7,478            0
+ 39        943,970           20,568           12,767         7,801            0
+ 40        965,906           21,440           13,299         8,141            0
+ 41        991,784           22,048           13,834         8,214            0
+ 42      1,012,319           21,520           13,342         8,178            0
+ 43      1,035,570           31,040           22,496         8,544            0
+72.47% (22,496B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->29.50% (9,156B) 0x109874: create_default_state (state.c:39)
+| ->01.22% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.22% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.22% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.22% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.22% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.22% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.22% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.22% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.22% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.22% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.22% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.22% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.22% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.22% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.22% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.22% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.22% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.22% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.22% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.22% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.22% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.22% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.22% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.22% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.22% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.22% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.22% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.22% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.22% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.22% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.22% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.22% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.22% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.22% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.22% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.22% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.22% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.22% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.22% (378B) 0x10C092: test_update_tail_board_3 (unit_tests.c:843)
+| | ->01.22% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.22% (378B) 0x10C142: test_update_tail_board_3 (unit_tests.c:855)
+| | ->01.22% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.22% (378B) 0x10C30E: test_update_state_board_1 (unit_tests.c:928)
+| | ->01.22% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.22% (378B) 0x10C3D9: test_update_state_board_1 (unit_tests.c:940)
+| | ->01.22% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.22% (378B) 0x10C47F: test_update_state_board_2 (unit_tests.c:983)
+| | ->01.22% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.22% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.22% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->00.27% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->26.39% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->26.39% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->26.39% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->26.39% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->26.39% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->26.39% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->26.39% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->26.39% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->26.39% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->26.39% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->26.39% (8,192B) 0x10C508: test_update_state_board_2 (unit_tests.c:989)
+|   |               | ->26.39% (8,192B) 0x10CA61: test_update_state (unit_tests.c:1145)
+|   |               |   ->26.39% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->26.39% (8,192B) 0x10D9AF: main (unit_tests.c:1684)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->11.60% (3,600B) 0x10980C: create_default_state (state.c:33)
+| ->11.60% (3,600B) in 25 places, all below massif's threshold (1.00%)
+|   
+->03.30% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.30% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->03.30% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->03.30% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->03.30% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->03.30% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->03.30% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.52% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.52% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.52% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.52% (472B) 0x10C508: test_update_state_board_2 (unit_tests.c:989)
+|   | | ->01.52% (472B) 0x10CA61: test_update_state (unit_tests.c:1145)
+|   | |   ->01.52% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.52% (472B) 0x10D9AF: main (unit_tests.c:1684)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.17% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 44      1,058,691           31,992           23,070         8,922            0
+72.11% (23,070B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->29.80% (9,534B) 0x109874: create_default_state (state.c:39)
+| ->01.18% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.18% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.18% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.18% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.18% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.18% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.18% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.18% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.18% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.18% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.18% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.18% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.18% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.18% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.18% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.18% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.18% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.18% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.18% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.18% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.18% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.18% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.18% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.18% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.18% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.18% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.18% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.18% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.18% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.18% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.18% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.18% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.18% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.18% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.18% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.18% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.18% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.18% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.18% (378B) 0x10C092: test_update_tail_board_3 (unit_tests.c:843)
+| | ->01.18% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.18% (378B) 0x10C142: test_update_tail_board_3 (unit_tests.c:855)
+| | ->01.18% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.18% (378B) 0x10C30E: test_update_state_board_1 (unit_tests.c:928)
+| | ->01.18% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.18% (378B) 0x10C3D9: test_update_state_board_1 (unit_tests.c:940)
+| | ->01.18% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.18% (378B) 0x10C47F: test_update_state_board_2 (unit_tests.c:983)
+| | ->01.18% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.18% (378B) 0x10C512: test_update_state_board_2 (unit_tests.c:992)
+| | ->01.18% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.18% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.18% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->00.26% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->25.61% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->25.61% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->25.61% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->25.61% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->25.61% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->25.61% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->25.61% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->25.61% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->25.61% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->25.61% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->25.61% (8,192B) 0x10C547: test_update_state_board_2 (unit_tests.c:994)
+|   |               | ->25.61% (8,192B) 0x10CA61: test_update_state (unit_tests.c:1145)
+|   |               |   ->25.61% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->25.61% (8,192B) 0x10D9AF: main (unit_tests.c:1684)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->11.70% (3,744B) 0x10980C: create_default_state (state.c:33)
+| ->11.70% (3,744B) in 26 places, all below massif's threshold (1.00%)
+|   
+->03.20% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.20% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->03.20% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->03.20% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->03.20% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->03.20% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->03.20% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.48% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.48% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.48% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.48% (472B) 0x10C547: test_update_state_board_2 (unit_tests.c:994)
+|   | | ->01.48% (472B) 0x10CA61: test_update_state (unit_tests.c:1145)
+|   | |   ->01.48% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.48% (472B) 0x10D9AF: main (unit_tests.c:1684)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.33% (104B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 45      1,070,487           23,792           14,878         8,914            0
+ 46      1,091,022           23,264           14,386         8,878            0
+ 47      1,100,304           23,976           14,813         9,163            0
+ 48      1,123,542           24,928           15,387         9,541            0
+ 49      1,137,569           33,736           24,114         9,622            0
+71.48% (24,114B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->30.50% (10,290B) 0x109874: create_default_state (state.c:39)
+| ->01.12% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.12% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.12% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.12% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.12% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.12% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.12% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.12% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.12% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.12% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.12% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.12% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.12% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.12% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.12% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.12% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.12% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.12% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.12% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.12% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.12% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.12% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.12% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.12% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.12% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.12% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.12% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.12% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.12% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.12% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.12% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.12% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.12% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.12% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.12% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.12% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.12% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.12% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.12% (378B) 0x10C092: test_update_tail_board_3 (unit_tests.c:843)
+| | ->01.12% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.12% (378B) 0x10C142: test_update_tail_board_3 (unit_tests.c:855)
+| | ->01.12% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.12% (378B) 0x10C30E: test_update_state_board_1 (unit_tests.c:928)
+| | ->01.12% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.12% (378B) 0x10C3D9: test_update_state_board_1 (unit_tests.c:940)
+| | ->01.12% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.12% (378B) 0x10C47F: test_update_state_board_2 (unit_tests.c:983)
+| | ->01.12% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.12% (378B) 0x10C512: test_update_state_board_2 (unit_tests.c:992)
+| | ->01.12% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.12% (378B) 0x10C5D3: test_update_state_board_3 (unit_tests.c:1036)
+| | ->01.12% (378B) 0x10CA88: test_update_state (unit_tests.c:1151)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.12% (378B) 0x10C6A8: test_update_state_board_3 (unit_tests.c:1048)
+| | ->01.12% (378B) 0x10CA88: test_update_state (unit_tests.c:1151)
+| |   ->01.12% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.12% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->00.25% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->24.28% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->24.28% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->24.28% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->24.28% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->24.28% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->24.28% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->24.28% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->24.28% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->24.28% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->24.28% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->24.28% (8,192B) 0x10C784: test_update_state_board_3 (unit_tests.c:1058)
+|   |               | ->24.28% (8,192B) 0x10CA88: test_update_state (unit_tests.c:1151)
+|   |               |   ->24.28% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->24.28% (8,192B) 0x10D9AF: main (unit_tests.c:1684)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->11.95% (4,032B) 0x10980C: create_default_state (state.c:33)
+| ->11.95% (4,032B) in 28 places, all below massif's threshold (1.00%)
+|   
+->03.04% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->03.04% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->03.04% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->03.04% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->03.04% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->03.04% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->03.04% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.40% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.40% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.40% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.40% (472B) 0x10C784: test_update_state_board_3 (unit_tests.c:1058)
+|   | | ->01.40% (472B) 0x10CA88: test_update_state (unit_tests.c:1151)
+|   | |   ->01.40% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.40% (472B) 0x10D9AF: main (unit_tests.c:1684)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.31% (104B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50      1,149,212           25,536           15,922         9,614            0
+ 51      1,169,747           25,008           15,430         9,578            0
+ 52      1,179,029           25,720           15,857         9,863            0
+ 53      1,193,055           34,528           24,584         9,944            0
+71.20% (24,584B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->30.90% (10,668B) 0x109874: create_default_state (state.c:39)
+| ->01.09% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.09% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.09% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.09% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.09% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.09% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.09% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.09% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.09% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.09% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.09% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.09% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.09% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.09% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.09% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.09% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.09% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.09% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.09% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.09% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.09% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.09% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.09% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.09% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.09% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.09% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.09% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.09% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.09% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.09% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.09% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.09% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.09% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.09% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.09% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.09% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.09% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.09% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.09% (378B) 0x10C092: test_update_tail_board_3 (unit_tests.c:843)
+| | ->01.09% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.09% (378B) 0x10C142: test_update_tail_board_3 (unit_tests.c:855)
+| | ->01.09% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.09% (378B) 0x10C30E: test_update_state_board_1 (unit_tests.c:928)
+| | ->01.09% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.09% (378B) 0x10C3D9: test_update_state_board_1 (unit_tests.c:940)
+| | ->01.09% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.09% (378B) 0x10C47F: test_update_state_board_2 (unit_tests.c:983)
+| | ->01.09% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.09% (378B) 0x10C512: test_update_state_board_2 (unit_tests.c:992)
+| | ->01.09% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.09% (378B) 0x10C5D3: test_update_state_board_3 (unit_tests.c:1036)
+| | ->01.09% (378B) 0x10CA88: test_update_state (unit_tests.c:1151)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.09% (378B) 0x10C6A8: test_update_state_board_3 (unit_tests.c:1048)
+| | ->01.09% (378B) 0x10CA88: test_update_state (unit_tests.c:1151)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.09% (378B) 0x10C80B: test_update_state_board_4 (unit_tests.c:1100)
+| | ->01.09% (378B) 0x10CAAF: test_update_state (unit_tests.c:1157)
+| |   ->01.09% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.09% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->00.24% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->23.73% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->23.73% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->23.73% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->23.73% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->23.73% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->23.73% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->23.73% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->23.73% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->23.73% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->23.73% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->23.73% (8,192B) 0x10C8D6: test_update_state_board_4 (unit_tests.c:1109)
+|   |               | ->23.73% (8,192B) 0x10CAAF: test_update_state (unit_tests.c:1157)
+|   |               |   ->23.73% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->23.73% (8,192B) 0x10D9AF: main (unit_tests.c:1684)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->12.09% (4,176B) 0x10980C: create_default_state (state.c:33)
+| ->12.09% (4,176B) in 29 places, all below massif's threshold (1.00%)
+|   
+->02.97% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.97% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->02.97% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->02.97% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->02.97% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->02.97% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->02.97% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.37% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.37% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.37% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.37% (472B) 0x10C8D6: test_update_state_board_4 (unit_tests.c:1109)
+|   | | ->01.37% (472B) 0x10CAAF: test_update_state (unit_tests.c:1157)
+|   | |   ->01.37% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.37% (472B) 0x10D9AF: main (unit_tests.c:1684)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.15% (52B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 54      1,202,906           26,712           16,452        10,260            0
+ 55      1,216,296           35,480           25,158        10,322            0
+70.91% (25,158B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->31.13% (11,046B) 0x109874: create_default_state (state.c:39)
+| ->01.07% (378B) 0x10A961: test_create_default_state (unit_tests.c:18)
+| | ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |   ->01.07% (378B) 0x10D8DD: main (unit_tests.c:1669)
+| |     
+| ->01.07% (378B) 0x10ADF4: test_print_board_1 (unit_tests.c:133)
+| | ->01.07% (378B) 0x10B1F5: test_print_board (unit_tests.c:202)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D907: main (unit_tests.c:1672)
+| |       
+| ->01.07% (378B) 0x10B260: test_next_square_board_1 (unit_tests.c:241)
+| | ->01.07% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.07% (378B) 0x10B2BC: test_next_square_board_1 (unit_tests.c:250)
+| | ->01.07% (378B) 0x10B73D: test_next_square (unit_tests.c:480)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.07% (378B) 0x10B32F: test_next_square_board_2 (unit_tests.c:287)
+| | ->01.07% (378B) 0x10B767: test_next_square (unit_tests.c:485)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.07% (378B) 0x10B3CF: test_next_square_board_3 (unit_tests.c:328)
+| | ->01.07% (378B) 0x10B791: test_next_square (unit_tests.c:490)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.07% (378B) 0x10B46F: test_next_square_board_4 (unit_tests.c:369)
+| | ->01.07% (378B) 0x10B7B8: test_next_square (unit_tests.c:495)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.07% (378B) 0x10B548: test_next_square_board_5 (unit_tests.c:413)
+| | ->01.07% (378B) 0x10B7DF: test_next_square (unit_tests.c:500)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.07% (378B) 0x10B63C: test_next_square_board_6 (unit_tests.c:458)
+| | ->01.07% (378B) 0x10B806: test_next_square (unit_tests.c:505)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D931: main (unit_tests.c:1675)
+| |       
+| ->01.07% (378B) 0x10B84A: test_update_head_board_1 (unit_tests.c:539)
+| | ->01.07% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.07% (378B) 0x10B8C2: test_update_head_board_1 (unit_tests.c:547)
+| | ->01.07% (378B) 0x10BC2F: test_update_head (unit_tests.c:675)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.07% (378B) 0x10B963: test_update_head_board_2 (unit_tests.c:590)
+| | ->01.07% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.07% (378B) 0x10B9DB: test_update_head_board_2 (unit_tests.c:598)
+| | ->01.07% (378B) 0x10BC56: test_update_head (unit_tests.c:681)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.07% (378B) 0x10BAB5: test_update_head_board_3 (unit_tests.c:644)
+| | ->01.07% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.07% (378B) 0x10BB48: test_update_head_board_3 (unit_tests.c:653)
+| | ->01.07% (378B) 0x10BC7D: test_update_head (unit_tests.c:687)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D95B: main (unit_tests.c:1678)
+| |       
+| ->01.07% (378B) 0x10BCC1: test_update_tail_board_1 (unit_tests.c:722)
+| | ->01.07% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.07% (378B) 0x10BD8C: test_update_tail_board_1 (unit_tests.c:734)
+| | ->01.07% (378B) 0x10C27C: test_update_tail (unit_tests.c:881)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.07% (378B) 0x10BE81: test_update_tail_board_2 (unit_tests.c:781)
+| | ->01.07% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.07% (378B) 0x10BF67: test_update_tail_board_2 (unit_tests.c:794)
+| | ->01.07% (378B) 0x10C2A3: test_update_tail (unit_tests.c:887)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.07% (378B) 0x10C092: test_update_tail_board_3 (unit_tests.c:843)
+| | ->01.07% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.07% (378B) 0x10C142: test_update_tail_board_3 (unit_tests.c:855)
+| | ->01.07% (378B) 0x10C2CA: test_update_tail (unit_tests.c:893)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D985: main (unit_tests.c:1681)
+| |       
+| ->01.07% (378B) 0x10C30E: test_update_state_board_1 (unit_tests.c:928)
+| | ->01.07% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.07% (378B) 0x10C3D9: test_update_state_board_1 (unit_tests.c:940)
+| | ->01.07% (378B) 0x10CA3A: test_update_state (unit_tests.c:1139)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.07% (378B) 0x10C47F: test_update_state_board_2 (unit_tests.c:983)
+| | ->01.07% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.07% (378B) 0x10C512: test_update_state_board_2 (unit_tests.c:992)
+| | ->01.07% (378B) 0x10CA61: test_update_state (unit_tests.c:1145)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.07% (378B) 0x10C5D3: test_update_state_board_3 (unit_tests.c:1036)
+| | ->01.07% (378B) 0x10CA88: test_update_state (unit_tests.c:1151)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.07% (378B) 0x10C6A8: test_update_state_board_3 (unit_tests.c:1048)
+| | ->01.07% (378B) 0x10CA88: test_update_state (unit_tests.c:1151)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.07% (378B) 0x10C80B: test_update_state_board_4 (unit_tests.c:1100)
+| | ->01.07% (378B) 0x10CAAF: test_update_state (unit_tests.c:1157)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->01.07% (378B) 0x10C8E0: test_update_state_board_4 (unit_tests.c:1112)
+| | ->01.07% (378B) 0x10CAAF: test_update_state (unit_tests.c:1157)
+| |   ->01.07% (378B) 0x10E39D: test_and_print (asserts.c:247)
+| |     ->01.07% (378B) 0x10D9AF: main (unit_tests.c:1684)
+| |       
+| ->00.24% (84B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->23.09% (8,192B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->23.09% (8,192B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->23.09% (8,192B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|   | ->23.09% (8,192B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|   |   ->23.09% (8,192B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|   |     ->23.09% (8,192B) 0x48EF00B: outstring_func (vfprintf-internal.c:239)
+|   |       ->23.09% (8,192B) 0x48EF00B: __vfprintf_internal (vfprintf-internal.c:1517)
+|   |         ->23.09% (8,192B) 0x48D86C9: fprintf (fprintf.c:32)
+|   |           ->23.09% (8,192B) 0x109AF2: print_board (state.c:88)
+|   |             ->23.09% (8,192B) 0x109B47: save_board (state.c:99)
+|   |               ->23.09% (8,192B) 0x10C9BC: test_update_state_board_4 (unit_tests.c:1122)
+|   |               | ->23.09% (8,192B) 0x10CAAF: test_update_state (unit_tests.c:1157)
+|   |               |   ->23.09% (8,192B) 0x10E39D: test_and_print (asserts.c:247)
+|   |               |     ->23.09% (8,192B) 0x10D9AF: main (unit_tests.c:1684)
+|   |               |       
+|   |               ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |               
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->12.18% (4,320B) 0x10980C: create_default_state (state.c:33)
+| ->12.18% (4,320B) in 30 places, all below massif's threshold (1.00%)
+|   
+->02.89% (1,024B) 0x48F6BA3: _IO_file_doallocate (filedoalloc.c:101)
+| ->02.89% (1,024B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->02.89% (1,024B) 0x4904F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->02.89% (1,024B) 0x49036D4: _IO_new_file_xsputn (fileops.c:1243)
+|       ->02.89% (1,024B) 0x49036D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->02.89% (1,024B) 0x48F8F1B: puts (ioputs.c:40)
+|           ->02.89% (1,024B) 0x10D890: main (unit_tests.c:1660)
+|             
+->01.33% (472B) 0x48F764D: __fopen_internal (iofopen.c:65)
+| ->01.33% (472B) 0x48F764D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->01.33% (472B) 0x109B30: save_board (state.c:98)
+|   | ->01.33% (472B) 0x10C9BC: test_update_state_board_4 (unit_tests.c:1122)
+|   | | ->01.33% (472B) 0x10CAAF: test_update_state (unit_tests.c:1157)
+|   | |   ->01.33% (472B) 0x10E39D: test_and_print (asserts.c:247)
+|   | |     ->01.33% (472B) 0x10D9AF: main (unit_tests.c:1684)
+|   | |       
+|   | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.29% (104B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56      1,227,942           27,280           16,966        10,314            0
+ 57      1,248,477           26,752           16,474        10,278            0
+ 58      1,257,880           27,120           16,862        10,258            0
+ 59      1,267,271          836,000          825,493        10,507            0
+ 60      1,275,551          836,880          826,054        10,826            0
+98.71% (826,054B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->95.60% (800,040B) 0x10A4C6: load_board (state.c:389)
+| ->95.60% (800,040B) 0x10DC7D: assert_load_equals (asserts.c:100)
+|   ->95.60% (800,040B) 0x10CD1E: test_load_board_1 (unit_tests.c:1264)
+|     ->95.60% (800,040B) 0x10CE11: test_load_board (unit_tests.c:1331)
+|       ->95.60% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|         ->95.60% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|           
+->01.79% (14,968B) in 10 places, all below massif's threshold (1.00%)
+| 
+->01.32% (11,046B) 0x109874: create_default_state (state.c:39)
+  ->01.32% (11,046B) in 30 places, all below massif's threshold (1.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61      1,628,108          837,344          826,516        10,828            0
+ 62      1,639,319          845,544          834,708        10,836            0
+98.72% (834,708B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->94.62% (800,040B) 0x10A4C6: load_board (state.c:389)
+| ->94.62% (800,040B) 0x10DC7D: assert_load_equals (asserts.c:100)
+|   ->94.62% (800,040B) 0x10CD1E: test_load_board_1 (unit_tests.c:1264)
+|     ->94.62% (800,040B) 0x10CE11: test_load_board (unit_tests.c:1331)
+|       ->94.62% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|         ->94.62% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|           
+->01.94% (16,384B) 0x48F6BF4: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.94% (16,384B) 0x4905CDF: _IO_doallocbuf (genops.c:347)
+|   ->01.94% (16,384B) in 3 places, all below massif's threshold (1.00%)
+|     
+->01.31% (11,046B) 0x109874: create_default_state (state.c:39)
+| ->01.31% (11,046B) in 30 places, all below massif's threshold (1.00%)
+|   
+->00.86% (7,238B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 63      1,646,473        1,637,224        1,626,190        11,034            0
+99.33% (1,626,190B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.73% (1,600,080B) 0x10A4C6: load_board (state.c:389)
+| ->97.73% (1,600,080B) 0x10DC7D: assert_load_equals (asserts.c:100)
+|   ->48.87% (800,040B) 0x10CD1E: test_load_board_1 (unit_tests.c:1264)
+|   | ->48.87% (800,040B) 0x10CE11: test_load_board (unit_tests.c:1331)
+|   |   ->48.87% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|   |     ->48.87% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|   |       
+|   ->48.87% (800,040B) 0x10CD84: test_load_board_2 (unit_tests.c:1288)
+|     ->48.87% (800,040B) 0x10CE38: test_load_board (unit_tests.c:1336)
+|       ->48.87% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|         ->48.87% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|           
+->01.59% (26,110B) in 12 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64      1,994,340        1,637,688        1,626,652        11,036            0
+ 65      2,003,857        2,437,424        2,426,340        11,084            0
+ 66      2,010,984        2,438,144        2,426,794        11,350            0
+99.53% (2,426,794B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.44% (2,400,120B) 0x10A4C6: load_board (state.c:389)
+| ->98.44% (2,400,120B) 0x10DC7D: assert_load_equals (asserts.c:100)
+|   ->32.81% (800,040B) 0x10CD1E: test_load_board_1 (unit_tests.c:1264)
+|   | ->32.81% (800,040B) 0x10CE11: test_load_board (unit_tests.c:1331)
+|   |   ->32.81% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|   |     ->32.81% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|   |       
+|   ->32.81% (800,040B) 0x10CD84: test_load_board_2 (unit_tests.c:1288)
+|   | ->32.81% (800,040B) 0x10CE38: test_load_board (unit_tests.c:1336)
+|   |   ->32.81% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|   |     ->32.81% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|   |       
+|   ->32.81% (800,040B) 0x10CDEA: test_load_board_3 (unit_tests.c:1325)
+|     ->32.81% (800,040B) 0x10CE5F: test_load_board (unit_tests.c:1340)
+|       ->32.81% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|         ->32.81% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|           
+->01.09% (26,674B) in 12 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 67      2,362,435        2,438,608        2,427,256        11,352            0
+ 68      2,372,030        2,438,824        2,427,461        11,363            0
+ 69      2,381,896        2,430,040        2,418,494        11,546            0
+ 70      2,399,222        2,430,848        2,419,134        11,714            0
+ 71      2,409,073        2,431,232        2,419,194        12,038            0
+ 72      2,432,509        2,431,272        2,419,216        12,056            0
+ 73      2,441,802        2,431,984        2,419,643        12,341            0
+ 74      2,455,833        2,432,608        2,420,198        12,410            0
+ 75      2,465,684        2,432,992        2,420,258        12,734            0
+ 76      2,488,608        2,433,032        2,420,280        12,752            0
+99.48% (2,420,280B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.65% (2,400,120B) 0x10A4C6: load_board (state.c:389)
+| ->98.65% (2,400,120B) 0x10DC7D: assert_load_equals (asserts.c:100)
+|   ->32.88% (800,040B) 0x10CD1E: test_load_board_1 (unit_tests.c:1264)
+|   | ->32.88% (800,040B) 0x10CE11: test_load_board (unit_tests.c:1331)
+|   |   ->32.88% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|   |     ->32.88% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|   |       
+|   ->32.88% (800,040B) 0x10CD84: test_load_board_2 (unit_tests.c:1288)
+|   | ->32.88% (800,040B) 0x10CE38: test_load_board (unit_tests.c:1336)
+|   |   ->32.88% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|   |     ->32.88% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|   |       
+|   ->32.88% (800,040B) 0x10CDEA: test_load_board_3 (unit_tests.c:1325)
+|     ->32.88% (800,040B) 0x10CE5F: test_load_board (unit_tests.c:1340)
+|       ->32.88% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|         ->32.88% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|           
+->00.83% (20,160B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 77      2,498,496        2,433,584        2,420,603        12,981            0
+ 78      2,514,962        2,434,352        2,421,222        13,130            0
+ 79      2,524,813        2,434,736        2,421,282        13,454            0
+ 80      2,543,404        2,434,816        2,421,324        13,492            0
+ 81      2,579,008        2,434,776        2,421,304        13,472            0
+ 82      2,588,301        2,435,488        2,421,731        13,757            0
+ 83      2,602,460        2,436,096        2,422,266        13,830            0
+ 84      2,612,311        2,436,480        2,422,326        14,154            0
+ 85      2,631,141        2,436,560        2,422,368        14,192            0
+ 86      2,667,355        2,436,520        2,422,348        14,172            0
+99.42% (2,422,348B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.51% (2,400,120B) 0x10A4C6: load_board (state.c:389)
+| ->98.51% (2,400,120B) 0x10DC7D: assert_load_equals (asserts.c:100)
+|   ->32.84% (800,040B) 0x10CD1E: test_load_board_1 (unit_tests.c:1264)
+|   | ->32.84% (800,040B) 0x10CE11: test_load_board (unit_tests.c:1331)
+|   |   ->32.84% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|   |     ->32.84% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|   |       
+|   ->32.84% (800,040B) 0x10CD84: test_load_board_2 (unit_tests.c:1288)
+|   | ->32.84% (800,040B) 0x10CE38: test_load_board (unit_tests.c:1336)
+|   |   ->32.84% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|   |     ->32.84% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|   |       
+|   ->32.84% (800,040B) 0x10CDEA: test_load_board_3 (unit_tests.c:1325)
+|     ->32.84% (800,040B) 0x10CE5F: test_load_board (unit_tests.c:1340)
+|       ->32.84% (800,040B) 0x10E39D: test_and_print (asserts.c:247)
+|         ->32.84% (800,040B) 0x10DA00: main (unit_tests.c:1690)
+|           
+->00.91% (22,228B) in 1+ places, all below ms_print's threshold (01.00%)
+
